@@ -27,11 +27,11 @@
 ## 22 September 2023
 
 * *2 hour* Level 4 project intro meeting (online)
-* *1 hour git hub account and repo setup*
+* *1 hour* Git hub account and repo setup
 
 ## 24 September 2023
 
-* *1 hour* Git hub repo cloned and further setup
+* *1 hour* Git hub repo cloned and further setup (upload of documents and commits)
 * *2 hours* Prepared timeline for project to discuss with supervisor
 
 
