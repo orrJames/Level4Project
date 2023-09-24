@@ -14,7 +14,7 @@
 
 ## Week 1
 
-### 18 September 2023
+### 19 September 2023
 
 * *0.5 hours* Contacting and arranging meeting with supervisor
 * *5 hours* Research and initial notes to prepare for initial meeting with supervisor  
