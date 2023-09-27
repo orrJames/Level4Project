@@ -34,4 +34,10 @@
 * *1 hour* Git hub repo cloned and further setup (upload of documents and commits)
 * *2 hours* Prepared timeline for project to discuss with supervisor
 
+## Week 2
+
+## 27 September 2023
+
+* *2 hours*  Research and notes on technologies to use for implementation
+
 
