@@ -39,5 +39,6 @@
 ## 27 September 2023
 
 * *2 hours*  Research and notes on technologies to use for implementation
+* *2 hours*  Followed a tutorial to create new button for jupyter notebook, reflective_note popup cell
 
 
