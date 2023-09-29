@@ -41,4 +41,12 @@
 * *2 hours*  Research and notes on technologies to use for implementation
 * *2 hours*  Followed a tutorial to create new button for jupyter notebook, reflective_note popup cell
 
+## 28 September 2023
+
+* *0.5 hour* Meeting with supervisor
+
+## 29 September 2023
+
+* *1 hour* Reading and further research on Gibbs reflection literature
+
 
