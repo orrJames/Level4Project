@@ -47,6 +47,13 @@
 
 ## 29 September 2023
 
-* *1 hour* Reading and further research on Gibbs reflection literature
+* *2 hours* Reading and further research on Gibbs reflection literature
+* *3 hours* Finalise and compose minimum project expectations
+
+## 1 October 2023
+
+* *2 Hours* Composed semi-structured interview for potential users
+* *3 Hours* Button extension for Jupyter (throwaway prototyping for implementation)
+
 
 
