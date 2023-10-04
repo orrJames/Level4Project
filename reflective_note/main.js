@@ -19,23 +19,19 @@ define([
         Jupyter.notebook.select_next();
       };
       // Add Toolbar button
-      var planetJupyterButton = function () {
+      var reflectiveNoteButton = function () {
           console.log();
           Jupyter.toolbar.add_buttons_group([
               Jupyter.keyboard_manager.actions.register ({
                   'help': 'Add note for self reflection xd',
-                  'icon' : 'fa-paper-plane',
+                  'icon' : 'fa-check',
                   'handler': insert_info_cell
               }, 'addplanetjupyter-cell', 'Reflective Note')
           ])
       }
     // Run on start
     function load_ipython_extension() {
-        // Add a default cell if there are no cells
-        if (Jupyter.notebook.get_cells().length===1){
-            insert_info_cell();
-        }
-        planetJupyterButton();
+        reflectiveNoteButton();
     }
     return {
         load_ipython_extension: load_ipython_extension
