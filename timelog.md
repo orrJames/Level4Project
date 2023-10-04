@@ -59,6 +59,6 @@
 
 ## 4 October 2023
 
-* *4 Hours* Timer extension for Jupyter extension 
+* *4 Hours* Timer extension for Jupyter Notebook
 
 
