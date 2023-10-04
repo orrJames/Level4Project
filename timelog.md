@@ -55,7 +55,7 @@
 * *2 Hours* Composed semi-structured interview for potential users
 * *3 Hours* Button extension for Jupyter (throwaway prototyping for implementation)
 
-## Week 2
+## Week 3
 
 ## 4 October 2023
 
