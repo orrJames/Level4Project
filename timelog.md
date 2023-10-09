@@ -55,5 +55,19 @@
 * *2 Hours* Composed semi-structured interview for potential users
 * *3 Hours* Button extension for Jupyter (throwaway prototyping for implementation)
 
+## Week 3
+
+## 4 October 2023
+
+* *4 Hours* Timer extension for Jupyter Notebook
+
+## 5 October 2023
+
+* *0.5 hour* Weekly meeting
+
+## 6 October 2023
+
+* *4 Hours* User stories and personas
+* *1 Hours* Draft requirments work
 
 
