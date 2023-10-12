@@ -70,4 +70,15 @@
 * *4 Hours* User stories and personas
 * *1 Hours* Draft requirments work
 
+## Week 4
+
+## 10 October 2023
+
+* *2 Hours* Reading Education and Experience by John Dewey
+
+## 11 October 2023
+
+* *2 hours* Further reading and note taking 
+
+
 
