@@ -78,7 +78,12 @@
 
 ## 11 October 2023
 
-* *2 hours* Further reading and note taking 
+* *2 hours* Further reading and note taking
+
+## 12 October 2023
+
+* *1 Hour* Meeting prep (Steve Draper had sent over a meeting agenda)
+* *1 Hour* Meeting with Steve Draper and Jeremy Singer
 
 
 
