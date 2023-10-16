@@ -89,11 +89,11 @@
 
 * *2 Hours* Reading Reflections in CS chapter passed on from Steve Draper meeting and making notes
 
-  ## Week 5
+## Week 5
 
-  ## 16 October 2023
+## 16 October 2023
 
-  * *2 Hours* Attended beginner level Python lab and recorded observations
+* *2 Hours* Attended beginner level Python lab and recorded observations
 
 
 
