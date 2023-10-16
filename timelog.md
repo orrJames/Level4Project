@@ -85,5 +85,9 @@
 * *1 Hour* Meeting prep (Steve Draper had sent over a meeting agenda)
 * *1 Hour* Meeting with Steve Draper and Jeremy Singer
 
+## 15 October 2023
+
+* *2 Hours* Reading Reflections in CS chapter passed on from Steve Draper meeting and making notes
+
 
 
