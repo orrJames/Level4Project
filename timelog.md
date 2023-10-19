@@ -95,5 +95,9 @@
 
 * *2 Hours* Attended beginner level Python lab and recorded observations
 
+## 19 October 2023
+
+* *1 Hour* Prep and meeting with supervisor 
+
 
 
