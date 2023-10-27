@@ -99,5 +99,16 @@
 
 * *1 Hour* Prep and meeting with supervisor 
 
+## 21 October 2023
+
+* *3 Hours* Read 2 PHD thesis given by Steve Draper
+
+## 22 October 2023
+
+* *3 Hours* Added detail to requirements
+* *2 Hours* Started implementing emotion/feeling add-on for Notebooks
+
+## Week 6
+
 
 
