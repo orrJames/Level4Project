@@ -1,0 +1,10 @@
+select {
+    display: inline;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px 10px;
+}

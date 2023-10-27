@@ -1,0 +1,8 @@
+Type: IPython Notebook Extension
+Main: main
+Name: EmotionSelector
+Section: common
+Require:
+  - base/js/namespace
+  - base/js/events
+Enable: true
