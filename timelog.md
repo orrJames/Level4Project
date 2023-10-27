@@ -110,5 +110,7 @@
 
 ## Week 6
 
+* *3 Hours* Emotions drop down add-on
+
 
 
