@@ -35,6 +35,10 @@ define([
         this.update();
     };
 
+    Stopwatch.prototype.save = function () {
+        console.log("elapsed time ", this.elapsedTime);
+    };
+
     Stopwatch.prototype.update = function () {
         var currentTime = new Date().getTime();
         var elapsedTime = this.startTime ? (currentTime - this.startTime) / 1000 : 0;
@@ -71,6 +75,14 @@ define([
             .text("Reset")
             .click(function () {
                 stopwatch.reset();
+                $button.text("Start");
+            });
+
+        var $saveButton = $("<button/>")
+            .addClass("btn btn-default")
+            .text("Save Time")
+            .click(function () {
+                stopwatch.save();
                 $button.text("Start");
             });
 

@@ -1,0 +1,49 @@
+// stopwatch.js
+define([
+    'jquery',
+    'base/js/namespace',
+    'base/js/utils',
+], function ($, Jupyter, utils) {
+    var Stopwatch = function () {
+        this.start = 0;
+        this.running = false;
+
+        this.startButton = $('<button>')
+            .text('Start')
+            .on('click', $.proxy(this.startStop, this));
+
+        this.saveButton = $('<button>')
+            .text('Save to .txt')
+            .on('click', $.proxy(this.saveData, this));
+
+        this.container = $('<div>')
+            .append(this.startButton)
+            .append(this.saveButton);
+
+        Jupyter.toolbar.element.append(this.container);
+    };
+
+    Stopwatch.prototype.startStop = function () {
+        if (this.running) {
+            this.running = false;
+            this.saveButton.prop('disabled', false);
+        } else {
+            this.running = true;
+            this.start = Date.now();
+            this.saveButton.prop('disabled', true);
+        }
+    };
+
+    Stopwatch.prototype.saveData = function () {
+        if (!this.running) {
+            var elapsedTime = Date.now() - this.start;
+            utils.download("stopwatch_data.txt", "Elapsed Time: " + elapsedTime + " milliseconds");
+        }
+    };
+
+    return {
+        load_ipython_extension: function () {
+            var stopwatch = new Stopwatch();
+        },
+    };
+});

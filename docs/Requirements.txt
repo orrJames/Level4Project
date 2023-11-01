@@ -1,0 +1,36 @@
+Requirements 
+1. The tool will be for beginner level students.
+2. The tool will be deployed on Jupyter.
+3. The user will be able to add a reflective note when completing their work.
+4. User reflections will be presented to the user at the end of the Jupyter notebook so they can evaluate their work.
+5. Students will be able to retrospectively review their previous work and self-reflective data.
+6. Users will be able to record the time spent on tasks.
+7. The self-reflective data gathered from the Notebooks should be available in a form which a professor or lab tutor would be able to review all the given responses for a lab Notebook i.e. a document with every students notes and responses.
+8. The tool should guide students through a reflective cycle (Gibbs) to evaluate their responses.
+9. Develop a way for the user to decide an action plan based on their reflections
+
+
+Functional 
+1. Beginner-level tool, simple interface
+2. Deployment on Jupyter
+3. Reflective note 
+a. This will be a markdown cell which a user can input text.
+b. There will be a text prompt to help the user reflective on their experience
+4. Emotion tracking
+a. The user will be prompted to from a drop-down menu of preset emotions
+5. Time tracking
+a. There will be a stopwatch at the top of the notebook page
+b. The stopwatch will have a start and reset function.
+6. Presentation of user reflections at end and beginning of lab session
+a. The reflection will be saved to a .txt file and accessible to users
+7. Retrospective review of reflection
+8. Data availability for professors and tutors
+a. The data from users will be accessible via .txt file 
+b. The data will include time spent on each section of the notebook and the user’s reflective notes
+9. The tool should guide the user through a reflective cycle based on their inputs
+10. The tool should suggest an action plan based on the user’s reflections
+
+Non-functional
+1. Usable: Easy to use 
+2. Scalable: The implementation should be able to support a number of users and should be able to support multiple types of Python labs
+3. Secure: User reflections should be stored securely to avoid data breaches

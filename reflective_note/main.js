@@ -18,9 +18,37 @@ define([
         set_text("Type you reflective note here!");
         Jupyter.notebook.select_next();
       };
+
+      var save_note = function(){
+        // let data = "reflective note data";
+        // const fs = require('fs'); 
+        // fs.readFile('file.txt', (err, data) => { 
+        //   if(err) { 
+        //     throw err; 
+        //   } 
+        //   console.log(data.toString()); 
+        // }); 
+
+        const fs = require('fs');
+
+        // Specify the file path and content
+        const filePath = 'example.txt';
+        const fileContent = 'This is the content that will be written to the file.';
+
+        // Write to the file
+        fs.writeFile(filePath, fileContent, (err) => {
+          if (err) {
+            console.error('Error writing to file:', err);
+          } else {
+            console.log('Successfully wrote to file!');
+          }
+        });
+      }
+
+
+
       // Add Toolbar button
       var reflectiveNoteButton = function () {
-          console.log();
           Jupyter.toolbar.add_buttons_group([
               Jupyter.keyboard_manager.actions.register ({
                   'help': 'Add note for self reflection xd',
@@ -28,6 +56,14 @@ define([
                   'handler': insert_info_cell
               }, 'addplanetjupyter-cell', 'Reflective Note')
           ])
+
+          Jupyter.toolbar.add_buttons_group([
+            Jupyter.keyboard_manager.actions.register ({
+                'help': 'Save your reflective note',
+                'icon' : 'fa-check',
+                'handler': save_note
+            }, 'addplanetjupyter-cell', 'Save Reflection')
+        ])
       }
     // Run on start
     function load_ipython_extension() {
