@@ -3,11 +3,11 @@ define([
     'base/js/namespace',
     'base/js/events',
     'require'
-], function(Jupyter, events, requirejs) {
-    var selectedEmotion = "Happy";
-    var write_to_file = function() {
-        const fs = require('fs');
-        fs.writeFile('Output.txt', selectedEmotion, (err) => {
+], function(Jupyter) {
+
+    var write_to_file = function() { //not working
+        const fs = require('fs'); // not recognising fs
+        fs.writeFile('Output.txt', "selectedEmotion", (err) => {
             if (err){
                 throw err;
             }
@@ -15,9 +15,18 @@ define([
         });
     }
 
+    //var insert_emotion_cell = function insert_emotion_cell() { 
+    var insert_emotion_cell = function() { //not called right now
+        Jupyter.notebook.
+        insert_cell_below('markdown').
+        set_text("Today you are ");
+        Jupyter.notebook.select_next();
+        Jupyter.notebook.execute_cell();
+      };
+
 
     function load_ipython_extension() {
-        var emotions = ["Happy", "Sad", "Angry", "Excited", "Bored"];
+        var emotions = ["Happy", "Sad", "Angry", "Excited", "Bored", "Satisfied", "Neutral"];
         var select = $('<select/>');
 
         emotions.forEach(function(emotion) {
@@ -30,7 +39,17 @@ define([
         select.on('change', function() {
             var selectedEmotion = select.val();
             //console.log(selectedEmotion);
-            write_to_file();
+            Jupyter.notebook.
+            insert_cell_below('markdown').
+            set_text(("Today you are ".concat(selectedEmotion)));
+            Jupyter.notebook.select_next();
+            Jupyter.notebook.execute_cell();
+
+
+            const file =new File(["foo"], "foo.txt", {
+                type: "text/plain",
+            });
+            file;
 
             // write to a file?
             // add a submit button which saves the emotion to a file so we
@@ -44,6 +63,7 @@ define([
             text: 'Select Emotion',
             click: function() {
                 select.toggle();
+                
             }
         });
 
