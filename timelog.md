@@ -124,5 +124,9 @@
 
 * *2 Hours* Worked on requirements and refactored to a .txt file
 
+## 1 Novemeber 2023
+
+* *5 Hours* Developement: Worked on displaying emotions in a markdown cell, saving user inputs to a file and making changes to timer
+
 
 
