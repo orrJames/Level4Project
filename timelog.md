@@ -110,7 +110,19 @@
 
 ## Week 6
 
+## 25 October 2023
+
 * *3 Hours* Emotions drop down add-on
+
+## 27 October 2023
+
+* *4 Hours* Further implementation work
+
+## Week 7
+
+## 31 October 2023
+
+* *2 Hours* Worked on requirements and refactored to a .txt file
 
 
 
