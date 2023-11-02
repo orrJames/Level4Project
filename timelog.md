@@ -128,5 +128,8 @@
 
 * *5 Hours* Developement: Worked on displaying emotions in a markdown cell, saving user inputs to a file and making changes to timer
 
+## 2 Novemeber 2023
+
+* *1 Hour*  Weekly meeting with supervisor (includes prep and post meeting minutes upload)
 
 
