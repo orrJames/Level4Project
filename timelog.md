@@ -132,4 +132,15 @@
 
 * *1 Hour*  Weekly meeting with supervisor (includes prep and post meeting minutes upload)
 
+## Week 8
+
+## 7 November 2023
+
+* *3 Hours* Created practice demo lab and screenshots for walkthrough
+
+## 8 Novemeber 2023
+
+* *3 Hours* Questions for lightweight study feedback
+
+
 
