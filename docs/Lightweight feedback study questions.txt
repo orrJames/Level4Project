@@ -1,0 +1,28 @@
+Lightweight feedback study questions
+Timer
+Do you think a timer for students would be useful? (scale of 1 - 5)
+Thoughts on timer (text box response)
+Would you (lecturer/tutor) like to know how long students took on each task? Or how long they spent on the overall lab? (yes/no, with optional text input)
+
+Reflective Note
+Do you think a reflective note input box for students would be useful? (scale of 1 - 5)
+Do you like the wording? (yes/no, if not then text box to elaborate why)
+Would you (lecturer/tutor) read the student reflective notes to get feedback? (yes/no, with text input)
+
+Emotion Selection
+Do you think a drop-down emotion selection for students would be useful? (scale of 1 - 5)
+What emotions would you change/add? (text input)
+How would you reword the prompt and returned markdown cell? (text box)
+Would you like to know what the students are feeling during a lab? (yes/no, with text input)
+
+Overall
+Do you Level 1 students could benefit from any other form of reflective interaction? (text input)
+Do you think any of the add-ons will cause a negative reaction for Level 1 students? (note, timer, emotion, none)
+How should the user inputs be saved? (saved in the notebooks, exported to pdf, exported to moodle, any other suggestions?)
+Would you (lecturer/tutor) like to access reflective data from a lab group? (yes/no) 
+	If yes, what format? (csv, pdf, excel, other)
+Do you think the user data(reflective note, emotions, time) should be anonymised or identifiable? (choose an option)
+Anything else? (text box)
+
+
+

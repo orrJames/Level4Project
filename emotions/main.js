@@ -46,10 +46,9 @@ define([
             Jupyter.notebook.execute_cell();
 
 
-            const file =new File(["foo"], "foo.txt", {
+            new File(["foo"], "foo.txt", {
                 type: "text/plain",
             });
-            file;
 
             // write to a file?
             // add a submit button which saves the emotion to a file so we
