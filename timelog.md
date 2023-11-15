@@ -124,11 +124,11 @@
 
 * *2 Hours* Worked on requirements and refactored to a .txt file
 
-## 1 Novemeber 2023
+## 1 November 2023
 
 * *5 Hours* Developement: Worked on displaying emotions in a markdown cell, saving user inputs to a file and making changes to timer
 
-## 2 Novemeber 2023
+## 2 November 2023
 
 * *1 Hour*  Weekly meeting with supervisor (includes prep and post meeting minutes upload)
 
@@ -138,13 +138,13 @@
 
 * *3 Hours* Created practice demo lab and screenshots for walkthrough
 
-## 8 Novemeber 2023
+## 8 November 2023
 
 * *3 Hours* Questions for lightweight study feedback
 
-## 9 Novemeber 2023
+## 9 November 2023
 
-* *3 Hour* Made a video and microsoft form
+* *3 Hour* Made a video and Microsoft form
 
 ## 10 Novemeber 2023
 
