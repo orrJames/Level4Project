@@ -142,5 +142,18 @@
 
 * *3 Hours* Questions for lightweight study feedback
 
+## 9 Novemeber 2023
 
+* *3 Hour* Made a video and microsoft form
+
+## 10 Novemeber 2023
+
+* *1 Hour* Discussed the video and form with Jeremy during FP lab
+
+
+## Week 9
+
+## 15 November 2023
+
+* *2 Hours* Processed and looked at data from lightweight feedback study
 
