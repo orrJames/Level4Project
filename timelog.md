@@ -158,4 +158,9 @@
 * *2 Hours* Processed and looked at data from lightweight feedback study
 * *0.5 Hours* Meeting with supervisor 
 
+## Week 10
+
+## 21 November 2023
+
+* *2 Hours* Started Firebase DB setup 
 
