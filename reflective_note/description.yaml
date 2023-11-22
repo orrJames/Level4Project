@@ -1,7 +1,7 @@
-Type: Jupyter Notebook Extension
+Type: Module
 Compatibility: 3.x, 4.x, 5.x, 6.x
 Name: Reflective Note
-Main: main.js
+Main: main.mjs
 Link: README.md
 Description: |
   Demo extension to add a default cell with code.
