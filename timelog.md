@@ -164,3 +164,10 @@
 
 * *2 Hours* Started Firebase DB setup 
 
+## 22 November 2023
+
+* *2 Hours* Firebase DB setup
+
+## 23 November 2023
+
+* *1 Hours* Continued DB setup 
