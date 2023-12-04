@@ -178,7 +178,7 @@
 
 * *2 Hours* Further client side firebase db setup
 
-  ## Week 12
+## Week 12
 
 ## 4 December 2023
 
