@@ -17,13 +17,32 @@
     // return write_to_db;
     // }
     // Import the functions you need from the SDKs you need
-import { write_to_db } from './firebase';
-      var insert_info_cell = function() {
+// import { write_to_db } from './firebase';
+    var firebaseConfig = {
+      apiKey: "AIzaSyCdpZmwThiGgPXsEAa9DJe8rZCRP3GqNe0",
+      authDomain: "level4project-7da7d.firebaseapp.com",
+      databaseURL: "https://level4project-7da7d-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "level4project-7da7d",
+      storageBucket: "level4project-7da7d.appspot.com",
+      messagingSenderId: "87351024118",
+      appId: "1:87351024118:web:0127948fcf317201f3cfd7",
+      measurementId: "G-0RXQN7H8P8"
+    };
+    // firebase.initializeApp(firebaseConfig);
+    // console.log(firebase)
+    // // Example: Add data to Firestore
+    // var db = firebase.firestore();
+    // var data = { name: "John", age: 30, city: "New York" };
+
+
+    //db.collection("users").doc("user1").set(data);
+    var insert_info_cell = function() {
         Jupyter.notebook.
         insert_cell_below('markdown').
         set_text("Make a note on the previous task! Think about what you found difficult and what went well. Reflect on something");
         Jupyter.notebook.select_next();
         Jupyter.notebook.execute_cell();
+        //db.collection("users").doc("user1").set(data);
         insert_response_cell();
       };
 

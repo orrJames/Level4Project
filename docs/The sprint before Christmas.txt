@@ -1,0 +1,15 @@
+The sprint before Christmas 
+1. Write everything to db
+a. Reflective note at end of lab
+b. Feeling at end of lab
+c. Time at end of lab
+2. Use emotions and time to prompt user
+a. Using text may be too difficult to parse 
+i. Unless we take out key word
+b. Apply reflective cycle
+i. Based on emotion and time devise an algorithm which suggests what the user should focus on next time
+3. Export to csv file
+a. Generate csv files based on lab number queries 
+b. Lecturer interface
+i. Website? 
+ii. Manual querying?
