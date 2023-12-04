@@ -170,4 +170,10 @@
 
 ## 23 November 2023
 
-* *1 Hours* Continued DB setup 
+* *1 Hours* Continued DB setup
+
+## Week 11 
+
+## 3 December 2023
+
+* *2 Hours* Further client side firebase db setup
