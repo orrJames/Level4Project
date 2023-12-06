@@ -183,3 +183,7 @@
 ## 4 December 2023
 
 * *6 Hours* General project work - writing to DB functionality, sprint planning, meeting prep
+
+## 5 December 2023
+
+* *6 Hours* Meeting w supervisor, further development of sprint plan
