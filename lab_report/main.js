@@ -26,7 +26,7 @@ var init_fb = function() {
   var toFB_cell= function() {
     Jupyter.notebook.
     insert_cell_below('code').
-    set_text("%%to_firebase\n#Type you reflective note here!");
+    set_text("%%read_notes\n#Enter a lab id");
     Jupyter.notebook.select_next();
     Jupyter.notebook.execute_cell();
     //Jupyter.notebook.get_selected_cell().element.hide();
@@ -37,15 +37,15 @@ var init_fb = function() {
 
 
   // Add Toolbar button
-  var databaseButton = function () {
+  var summaryButton = function () {
       Jupyter.toolbar.add_buttons_group([
           Jupyter.keyboard_manager.actions.register ({
-              'help': 'Write to database',
-              'icon' : 'fa-bolt',
+              'help': 'Generate a summary report',
+              'icon' : '<i class="fas fa-x-ray"></i>',
               'handler': init_fb
-          }, 'addplanetjupyter-cell', 'Write to fb db')
+          }, 'addplanetjupyter-cell', 'Read from fb db')
       ])
   }
 // Run on start
 //function load_ipython_extension() {
-    databaseButton();
+    summaryButton();

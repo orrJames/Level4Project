@@ -41,9 +41,9 @@ define([
 
     Stopwatch.prototype.update = function () {
         var currentTime = new Date().getTime();
-        var elapsedTime = this.startTime ? (currentTime - this.startTime) / 1000 : 0;
-        var formattedTime = this.formatTime(elapsedTime);
-        this.container.text(formattedTime);
+        this.elapsedTime = this.startTime ? (currentTime - this.startTime) / 1000 : 0;
+        this.formattedTime = this.formatTime(this.elapsedTime);
+        this.container.text(this.formattedTime);
     };
 
     Stopwatch.prototype.formatTime = function (seconds) {
@@ -80,17 +80,34 @@ define([
 
         var $saveButton = $("<button/>")
             .addClass("btn btn-default")
-            .text("Save Time")
+            .text("Save")
             .click(function () {
-                stopwatch.save();
-                $button.text("Start");
+            Jupyter.notebook.
+            insert_cell_below('code').
+            set_text("%load_ext autoreload\n%autoreload 2\n%run C:\\Users\\orrja\\uni\\Level4\\Level4Project\\reflective_note\\reflective_note");
+            Jupyter.notebook.select_next();
+            Jupyter.notebook.execute_cell();
+        
+        
+        
+            // Hide the current cell
+            Jupyter.notebook.get_selected_cell().element.hide();
+        
+            // //db.collection("users").doc("user1").set(data);
+
+            Jupyter.notebook.
+            insert_cell_below('code').
+            set_text("%%time_to_firebase\n".concat(Stopwatch.formattedTime));
+            Jupyter.notebook.select_next();
+            Jupyter.notebook.execute_cell();
+
             });
 
         stopwatch.container = $("<div/>")
             .addClass("stopwatch")
             .text("00:00:00");
 
-        $toolbar.append(stopwatch.container, $button, $resetButton);
+        $toolbar.append(stopwatch.container, $button, $resetButton, $saveButton);
     }
 
     return {

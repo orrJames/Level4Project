@@ -46,17 +46,26 @@ define([
             Jupyter.notebook.execute_cell();
 
 
-            new File(["foo"], "foo.txt", {
-                type: "text/plain",
-            });
+            Jupyter.notebook.
+            insert_cell_below('code').
+            set_text("%load_ext autoreload\n%autoreload 2\n%run C:\\Users\\orrja\\uni\\Level4\\Level4Project\\reflective_note\\reflective_note");
+            Jupyter.notebook.select_next();
+            Jupyter.notebook.execute_cell();
+        
+        
+        
+            // Hide the current cell
+            Jupyter.notebook.get_selected_cell().element.hide();
+        
+            // //db.collection("users").doc("user1").set(data);
 
-            // write to a file?
-            // add a submit button which saves the emotion to a file so we
-            //can access later?
-            
-            // Write data in 'Output.txt' . 
-             // this does not work
-        });
+            Jupyter.notebook.
+            insert_cell_below('code').
+            set_text("%%emotion_to_firebase\n".concat(selectedEmotion));
+            Jupyter.notebook.select_next();
+            Jupyter.notebook.execute_cell();
+            //Jupyter.notebook.get_selected_cell().element.hide();
+            });
 
         var button = $('<button/>', {
             text: 'Select Emotion',
