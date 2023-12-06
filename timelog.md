@@ -187,3 +187,7 @@
 ## 5 December 2023
 
 * *6 Hours* Meeting w supervisor, further development of sprint plan
+
+## 6 December 2023
+
+* *5 Hours* Integration of AI Llama tools to summarise student feedback
