@@ -177,3 +177,9 @@
 ## 3 December 2023
 
 * *2 Hours* Further client side firebase db setup
+
+## Week 12
+
+## 4 December 2023
+
+* *6 Hours* General project work - writing to DB functionality, sprint planning, meeting prep
