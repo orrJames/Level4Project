@@ -36,7 +36,30 @@ define([
     };
 
     Stopwatch.prototype.save = function () {
-        console.log("elapsed time ", this.elapsedTime);
+        var currentTime = new Date().getTime();
+        this.elapsedTime = this.startTime ? (currentTime - this.startTime) / 1000 : 0;
+        this.formattedTime = this.formatTime(this.elapsedTime);
+        this.container.text(this.formattedTime);
+        console.log("elapsed time ", this.formattedTime);
+        var time = this.formattedTime;
+        Jupyter.notebook.
+            insert_cell_below('code').
+            set_text("%load_ext autoreload\n%autoreload 2\n%run C:\\Users\\orrja\\uni\\Level4\\Level4Project\\reflective_note\\reflective_note");
+            Jupyter.notebook.select_next();
+            Jupyter.notebook.execute_cell();
+        
+        
+        
+            // Hide the current cell
+            Jupyter.notebook.get_selected_cell().element.hide();
+        
+            // //db.collection("users").doc("user1").set(data);
+
+            Jupyter.notebook.
+            insert_cell_below('code').
+            set_text("%%time_to_firebase\n".concat(time));
+            Jupyter.notebook.select_next();
+            Jupyter.notebook.execute_cell();
     };
 
     Stopwatch.prototype.update = function () {
@@ -82,25 +105,7 @@ define([
             .addClass("btn btn-default")
             .text("Save")
             .click(function () {
-            Jupyter.notebook.
-            insert_cell_below('code').
-            set_text("%load_ext autoreload\n%autoreload 2\n%run C:\\Users\\orrja\\uni\\Level4\\Level4Project\\reflective_note\\reflective_note");
-            Jupyter.notebook.select_next();
-            Jupyter.notebook.execute_cell();
-        
-        
-        
-            // Hide the current cell
-            Jupyter.notebook.get_selected_cell().element.hide();
-        
-            // //db.collection("users").doc("user1").set(data);
-
-            Jupyter.notebook.
-            insert_cell_below('code').
-            set_text("%%time_to_firebase\n".concat(Stopwatch.formattedTime));
-            Jupyter.notebook.select_next();
-            Jupyter.notebook.execute_cell();
-
+                stopwatch.save();
             });
 
         stopwatch.container = $("<div/>")

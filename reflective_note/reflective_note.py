@@ -1,3 +1,4 @@
+import csv
 import datetime
 from IPython.core.magic import Magics, magics_class, register_cell_magic
 import firebase_admin
@@ -9,6 +10,7 @@ import socket
 import replicate
 from getpass import getpass
 import os
+import pandas as pd
 
 @magics_class
 class FirebaseExtension(Magics):
@@ -86,18 +88,20 @@ class FirebaseExtension(Magics):
             doc_ref = db.collection('timeSpent').add({'time': time, 'timestamp': timestamp, 'lab': lab, 'user': IPAddr})
             print("Data written to Firebase with ID: ", doc_ref, timestamp)
             
-    def generate_summary(x):
+    def generate_summary(x,lab):
         llama2_13b = "meta/llama-2-13b-chat:f4e2de70d66816a838a89eeeb621910adffb0dd0baba3976c96980970978018d"
 
     # REPLICATE_API_TOKEN = getpass()
         os.environ["REPLICATE_API_TOKEN"] = "r8_GnYKyT4fcwVrYH3bGc6nVuMJ0VZKDhX0LfmpR"
     #r8_GnYKyT4fcwVrYH3bGc6nVuMJ0VZKDhX0LfmpR
-        pre_prompt = "In a third-party formal tone, make a summary of the key themes in the following text. The following text is separated by ::. Summarise each different contribution. Keep it below 200 words please :)"
+        pre_prompt = "In a third-party formal tone, make a summary of the key themes in the following text. Keep it below 200 words please."
         output = replicate.run(
         llama2_13b,
         input={"prompt": (pre_prompt+x), "max_new_tokens":1000}
         )
         print ("".join(output))
+
+        FirebaseExtension.time_summary(lab)
 
     @register_cell_magic
     def read_notes(self,comment):
@@ -123,8 +127,80 @@ class FirebaseExtension(Magics):
                 pass
         print(x)
         if x != "":
-            FirebaseExtension.generate_summary(x)
-        print("No lab notes with that ID")
+            FirebaseExtension.generate_summary(x, lab)
+        else:
+            print("No lab notes with that ID")
+            FirebaseExtension.time_summary(lab)
+
+    def time_summary(lab):
+        total = 0
+        counter = 0
+        db = firestore.client()
+        collection_ref = db.collection("timeSpent")
+        documents = collection_ref.stream()
+        for doc in documents:
+            #print( "Data: ", doc.to_dict())
+            try:
+                if (doc.to_dict()["lab"]) == lab:
+                    #x = x+"Lab ID:"+(str(doc.to_dict()["lab"]))+" Note:"+doc.to_dict()["note"] + ","
+                    counter  = counter +1
+                    total = total + (int(doc.to_dict()["note"][1]) * 60) + (int(doc.to_dict()["note"][3]*10)) + (int(doc.to_dict()["note"][4]))
+            except:
+                pass
+        if counter == 0:
+            print("No user recorded their time")
+        else:
+            print("Total time entries: ", counter, "\n", "Average time taken: ", (total/counter))
+        FirebaseExtension.generate_csv(lab)
+    
+    def get_data(lab, documents):
+        data = []
+        for doc in documents:
+            #print( "Data: ", doc.to_dict())
+            try:
+                if (doc.to_dict()["lab"]) == lab:
+                    #x = x+"Lab ID:"+(str(doc.to_dict()["lab"]))+" Note:"+doc.to_dict()["note"] + ","
+                    data.append(doc.to_dict())
+            except:
+                pass
+        return data
+    
+    def generate_csv(lab):
+        db = firestore.client()
+        notes_ref = db.collection("reflective_notes")
+        emotions_ref = db.collection("emotions")
+        time_ref = db.collection("timeSpent")
+        # Get all documents from the collection
+        reflective_notes = notes_ref.stream()
+
+
+        # Extract document data and write to CSV
+        notes_data = FirebaseExtension.get_data(lab,reflective_notes)
+        emotions_data = FirebaseExtension.get_data(lab,emotions_ref.stream())
+        time_data = FirebaseExtension.get_data(lab,time_ref.stream())
+        
+        # # If you want to use Pandas to export to CSV
+        # df = pd.DataFrame(data)
+        # df.to_csv(csv_filename, index=False)
+
+        # If you want to use CSV library directly
+        file_name = "lab_"+ str(lab)+ "_reflections.csv"
+        with open(file_name, mode='w', newline='') as file:
+            try:
+                writer = csv.DictWriter(file, fieldnames=notes_data[0].keys())
+                writer.writeheader()
+                writer.writerows(notes_data)
+
+                writer = csv.DictWriter(file, fieldnames=emotions_data[0].keys())
+                writer.writeheader()
+                writer.writerows(emotions_data)
+
+                writer = csv.DictWriter(file, fieldnames=time_data[0].keys())
+                writer.writeheader()
+                writer.writerows(time_data)
+            except:
+                pass
+        print("csv_generated: "+ file_name)
 
 
 def load_ipython_extension(ipython):
@@ -133,23 +209,3 @@ def load_ipython_extension(ipython):
 
 # Initialize Firebase when the extension is loaded
 load_ipython_extension(get_ipython())
-
-
-# import replicate
-# from getpass import getpass
-# import os
-# llama2_13b = "meta/llama-2-13b-chat:f4e2de70d66816a838a89eeeb621910adffb0dd0baba3976c96980970978018d"
-
-# REPLICATE_API_TOKEN = getpass()
-# os.environ["REPLICATE_API_TOKEN"] = REPLICATE_API_TOKEN
-# #r8_GnYKyT4fcwVrYH3bGc6nVuMJ0VZKDhX0LfmpR
-# pre_prompt = "In third-party formal tone, make a summary of the key themes in the following text. Keep it below 200 words please :)"
-# prompt_input = getFeedbackNotes
-
-# # text completion with input prompt
-# def Completion(prompt):
-#     output = replicate.run(
-#       llama2_13b,
-#       input={"prompt": (pre_promt+prompt_input), "max_new_tokens":1000}
-#   )
-#     return "".join(output)

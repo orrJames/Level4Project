@@ -11,7 +11,7 @@ var init_fb = function() {
     Jupyter.notebook.get_selected_cell().element.hide();
 
     // //db.collection("users").doc("user1").set(data);
-    toFB_cell()
+    to_firebase_cell()
   };
 
 //   var get_lab_id = function(){
@@ -23,7 +23,7 @@ var init_fb = function() {
 //     toFB_cell();
 // }
 
-  var toFB_cell= function() {
+  var to_firebase_cell= function() {
     Jupyter.notebook.
     insert_cell_below('code').
     set_text("%%to_firebase\n#Type you reflective note here!");
