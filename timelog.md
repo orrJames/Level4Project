@@ -191,3 +191,11 @@
 ## 6 December 2023
 
 * *5 Hours* Integration of AI Llama tools to summarise student feedback
+
+## 7 December 2023
+
+* *5 Hours* Work on read from db and writing to csv file
+
+## 10 December 2023
+
+* *6 Hours* Completed lecturer view and file generated
