@@ -194,8 +194,23 @@
 
 ## 7 December 2023
 
-* *5 Hours* Work on read from db and writing to csv file
+## Week 13
 
-## 10 December 2023
+## 9 January 2024
 
-* *6 Hours* Completed lecturer view and file generated
+* *3 Hours* Started writing unit test for Python code
+
+## 10 January 2024
+
+* *1 Hours* Meeting with supervisor and prep
+
+## 12 January 2024
+
+* *3 Hours* Evaluation reading and planning
+
+## Week 14
+
+## 15 January 2024
+
+* *2 Hours* Further evaluation reading and planning
+
