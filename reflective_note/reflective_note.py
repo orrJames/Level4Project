@@ -10,7 +10,10 @@ import socket
 import replicate
 from getpass import getpass
 import os
-import pandas as pd
+
+
+from IPython import display
+from IPython.display import Image
 
 @magics_class
 class FirebaseExtension(Magics):
@@ -23,7 +26,7 @@ class FirebaseExtension(Magics):
     def to_firebase(self, comment):
         hostname = socket.gethostname()
         IPAddr = socket.gethostbyname(hostname)
-        data = input("Enter you refelctive feedback for the lecturer.")
+        data = input("Describe and reflect on your experience in this lab.")
         # cred = credentials.Certificate('C:\\Users\\orrja\\uni\\Level4\\Level4Project\\reflective_note\\level4project-7da7d-firebase-adminsdk-jsr7h-332e1c8523.json')
         
         # firebase_admin.initialize_app(cred)
@@ -43,7 +46,7 @@ class FirebaseExtension(Magics):
             print("this is timestamp",timestamp)
             doc_ref = db.collection('reflective_notes').add({'note': data, 'timestamp': timestamp, 'lab': lab, 'user': IPAddr})
             print("Data written to Firebase with ID: ", doc_ref, timestamp)
-        
+        FirebaseExtension.gibbs_cycle_continued()
     @register_cell_magic
     def emotion_to_firebase(self, emotion):
         hostname = socket.gethostname()
@@ -65,6 +68,14 @@ class FirebaseExtension(Magics):
             print("this is timestamp",timestamp)
             doc_ref = db.collection('emotions').add({'feeling': emotion, 'timestamp': timestamp, 'lab': lab, 'user': IPAddr})
             print("Data written to Firebase with ID: ", doc_ref, timestamp)
+        
+    
+    def gibbs_cycle_continued():
+        #Image(filename="C:\\Users\\orrja\\uni\\Level4\\Level4Project\\reflective_note\\gibbs_cycle.png")
+        feelings_step = input("Look back at the feelings you have selected.  How have they changed, or have they stayed the same? \n")
+        evalualtion_step = input("Lets reflect! What's one thing that went well this time, and one thing to improve on for next time? \n")
+        conclusion_step = input("Finally, drawing from the time spent, emotions throughout, and your overall reflections.  What are you going to do differently next time? \n")
+
     
     @register_cell_magic
     def time_to_firebase(self, time):
@@ -172,7 +183,6 @@ class FirebaseExtension(Magics):
         time_ref = db.collection("timeSpent")
         # Get all documents from the collection
         reflective_notes = notes_ref.stream()
-
 
         # Extract document data and write to CSV
         notes_data = FirebaseExtension.get_data(lab,reflective_notes)

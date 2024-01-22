@@ -26,9 +26,13 @@ var init_fb = function() {
   var to_firebase_cell= function() {
     Jupyter.notebook.
     insert_cell_below('code').
-    set_text("%%to_firebase\n#Type you reflective note here!");
+    set_text("%%to_firebase\n#Describe your experience");
     Jupyter.notebook.select_next();
     Jupyter.notebook.execute_cell();
+    // not working - want to display gibbs reflective cycle diagram - help users understand the work flow
+        // var imgElement = $('<img>')
+        //     .attr("src", "gibbs_cycle.png")
+        // Jupyter.notebook.get_cell(0).element.append(imgElement);
     //Jupyter.notebook.get_selected_cell().element.hide();
     };
 
