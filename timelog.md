@@ -214,3 +214,17 @@
 
 * *2 Hours* Further evaluation reading and planning
 
+## 18 January 2024
+
+* *4 Hours* Evaluation protocol planning, recruiting participants, and starting writing evaluation Notebooks
+
+## 19 January 2024
+
+* *1 Hours* Prep and supervisor meeting
+
+## Week 15
+
+## 15 January 2024
+
+* *4 Hours* Created three-week Notebook course for evaluation volunteers
+
