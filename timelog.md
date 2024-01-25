@@ -224,7 +224,11 @@
 
 ## Week 15
 
-## 15 January 2024
+## 22 January 2024
 
 * *4 Hours* Created three-week Notebook course for evaluation volunteers
+
+## 24 January 2024
+
+* *1 Hour* Attend staff Notebook workshop 
 
