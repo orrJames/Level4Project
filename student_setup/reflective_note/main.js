@@ -95,19 +95,11 @@
       var reflectiveNoteButton = function () {
           Jupyter.toolbar.add_buttons_group([
               Jupyter.keyboard_manager.actions.register ({
-                  'help': 'Add note for self reflection xd',
+                  'help': 'Add note for self reflection',
                   'icon' : 'fa-check',
                   'handler': insert_info_cell
               }, 'addplanetjupyter-cell', 'Reflective Note')
           ])
-
-          Jupyter.toolbar.add_buttons_group([
-            Jupyter.keyboard_manager.actions.register ({
-                'help': 'Save your reflective note',
-                'icon' : 'fa-check',
-                'handler': save_note
-            }, 'addplanetjupyter-cell', 'Save Reflection')
-        ])
       }
     // Run on start
     //function load_ipython_extension() {
