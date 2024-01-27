@@ -34,18 +34,18 @@ class FirebaseExtension(Magics):
         try:
             db = firestore.client()
             timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            print("this is timestamp",timestamp)
+            #print("this is timestamp",timestamp)
             doc_ref = db.collection('reflective_notes').add({'note': data,'timestamp': timestamp,'lab': lab, 'user': IPAddr})
-            print("Data written to Firebase with ID: ", doc_ref)
+            #print("Data written to Firebase with ID: ", doc_ref)
         except:
-            print("fb db not init")
+            #print("fb db not init")
             cred = credentials.Certificate('C:\\Users\\orrja\\uni\\Level4\\Level4Project\\reflective_note\\level4project-7da7d-firebase-adminsdk-jsr7h-332e1c8523.json')
             firebase_admin.initialize_app(cred)
             db = firestore.client()
             timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            print("this is timestamp",timestamp)
+            #print("this is timestamp",timestamp)
             doc_ref = db.collection('reflective_notes').add({'note': data, 'timestamp': timestamp, 'lab': lab, 'user': IPAddr})
-            print("Data written to Firebase with ID: ", doc_ref, timestamp)
+            #print("Data written to Firebase with ID: ", doc_ref, timestamp)
         FirebaseExtension.gibbs_cycle_continued()
     @register_cell_magic
     def emotion_to_firebase(self, emotion):
@@ -56,18 +56,18 @@ class FirebaseExtension(Magics):
         try:
             db = firestore.client()
             timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            print("this is timestamp",timestamp)
+            #print("this is timestamp",timestamp)
             doc_ref = db.collection('emotions').add({'feeling': emotion,'timestamp': timestamp,'lab': lab, 'user': IPAddr})
-            print("Data written to Firebase with ID: ", doc_ref)
+            #print("Data written to Firebase with ID: ", doc_ref)
         except:
-            print("fb db not init")
+            #print("fb db not init")
             cred = credentials.Certificate('C:\\Users\\orrja\\uni\\Level4\\Level4Project\\reflective_note\\level4project-7da7d-firebase-adminsdk-jsr7h-332e1c8523.json')
             firebase_admin.initialize_app(cred)
             db = firestore.client()
             timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            print("this is timestamp",timestamp)
+            #print("this is timestamp",timestamp)
             doc_ref = db.collection('emotions').add({'feeling': emotion, 'timestamp': timestamp, 'lab': lab, 'user': IPAddr})
-            print("Data written to Firebase with ID: ", doc_ref, timestamp)
+            #print("Data written to Firebase with ID: ", doc_ref, timestamp)
         
     
     def gibbs_cycle_continued():
@@ -86,18 +86,18 @@ class FirebaseExtension(Magics):
         try:
             db = firestore.client()
             timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            print("this is timestamp",timestamp)
+            #print("this is timestamp",timestamp)
             doc_ref = db.collection('timeSpent').add({'time': time,'timestamp': timestamp,'lab': lab, 'user': IPAddr})
-            print("Data written to Firebase with ID: ", doc_ref)
+            #print("Data written to Firebase with ID: ", doc_ref)
         except:
-            print("fb db not init")
+            #print("fb db not init")
             cred = credentials.Certificate('C:\\Users\\orrja\\uni\\Level4\\Level4Project\\reflective_note\\level4project-7da7d-firebase-adminsdk-jsr7h-332e1c8523.json')
             firebase_admin.initialize_app(cred)
             db = firestore.client()
             timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            print("this is timestamp",timestamp)
+            #print("this is timestamp",timestamp)
             doc_ref = db.collection('timeSpent').add({'time': time, 'timestamp': timestamp, 'lab': lab, 'user': IPAddr})
-            print("Data written to Firebase with ID: ", doc_ref, timestamp)
+            #print("Data written to Firebase with ID: ", doc_ref, timestamp)
             
     def generate_summary(x,lab):
         llama2_13b = "meta/llama-2-13b-chat:f4e2de70d66816a838a89eeeb621910adffb0dd0baba3976c96980970978018d"
@@ -136,7 +136,7 @@ class FirebaseExtension(Magics):
                     x = x +doc.to_dict()["note"] + '::'
             except:
                 pass
-        print(x)
+        #print(x)
         if x != "":
             FirebaseExtension.generate_summary(x, lab)
         else:

@@ -65,6 +65,7 @@ define([
             Jupyter.notebook.select_next();
             Jupyter.notebook.execute_cell();
             //Jupyter.notebook.get_selected_cell().element.hide();
+
             });
 
         var button = $('<button/>', {

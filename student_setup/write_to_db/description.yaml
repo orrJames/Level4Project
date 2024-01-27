@@ -1,0 +1,9 @@
+Type: Module
+Compatibility: 3.x, 4.x, 5.x, 6.x
+Name: Write to fb db
+Main: main.js
+Link: README.md
+Description: |
+  Creates boiler plate to write to db
+Parameters:
+- none
