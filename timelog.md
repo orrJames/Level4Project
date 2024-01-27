@@ -230,5 +230,13 @@
 
 ## 24 January 2024
 
-* *1 Hour* Attend staff Notebook workshop 
+* *1 Hour* Attend staff Notebook workshop
+
+## 25 January 2024
+
+* *1 Hour* Meeting with supervisor(ran over)
+
+## 26 January 2024
+
+* *5 Hour* Testing setup on Mac, running pilot study in prep for actual study
 
