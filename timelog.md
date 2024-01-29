@@ -240,3 +240,12 @@
 
 * *5 Hour* Testing setup on Mac, running pilot study in prep for actual study
 
+## 28 January 2024
+
+* *5 Hour* Pilot study: My participant completed the first lab and I observed.  I dealt with issues and finetuned my study based on the pilot.
+
+## Week 15
+
+## 29 January 2024
+
+* *6 Hours* Wrote ethics intro script and invite info email.  I also made flyers to spread the word about my project.  Finally, I started creating the quiz for the participants.
