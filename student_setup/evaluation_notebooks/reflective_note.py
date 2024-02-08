@@ -26,7 +26,7 @@ class FirebaseExtension(Magics):
     def to_firebase(self, comment):
         hostname = socket.gethostname()
         IPAddr = socket.gethostbyname(hostname)
-        data = input("Describe and reflect on your experience in this lab.")
+        data = input("Describe and reflect on your experience in this lab as a whole.")
         # cred = credentials.Certificate('C:\\Users\\orrja\\uni\\Level4\\Level4Project\\reflective_note\\level4project-7da7d-firebase-adminsdk-jsr7h-332e1c8523.json')
         
         # firebase_admin.initialize_app(cred)
@@ -72,8 +72,7 @@ class FirebaseExtension(Magics):
     
     def gibbs_cycle_continued():
         #Image(filename="C:\\Users\\orrja\\uni\\Level4\\Level4Project\\reflective_note\\gibbs_cycle.png")
-        feelings_step = input("Look back at the feelings you have selected.  How have they changed, or have they stayed the same? \n")
-        evalualtion_step = input("Lets reflect! What's one thing that went well this time, and one thing to improve on for next time? \n")
+        feelings_step = input("Looking back at the end of this lab, how do you feel overall about the lab today? \n")
         conclusion_step = input("Finally, drawing from the time spent, emotions throughout, and your overall reflections.  What are you going to do differently next time? \n")
 
     

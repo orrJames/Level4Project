@@ -26,7 +26,7 @@ define([
 
 
     function load_ipython_extension() {
-        var emotions = ["Happy", "Sad", "Angry", "Excited", "Bored", "Satisfied", "Neutral"];
+        var emotions = ["Joy", "Sad", "Angry", "Excited", "Bored", "Satisfied", "Neutral", "Despair"];
         var select = $('<select/>');
 
         emotions.forEach(function(emotion) {

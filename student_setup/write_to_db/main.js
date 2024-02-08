@@ -44,10 +44,10 @@ var init_fb = function() {
   var databaseButton = function () {
       Jupyter.toolbar.add_buttons_group([
           Jupyter.keyboard_manager.actions.register ({
-              'help': 'Write to database',
+              'help': 'End of Notebook reflection',
               'icon' : 'fa-bolt',
               'handler': init_fb
-          }, 'addplanetjupyter-cell', 'Write to fb db')
+          }, 'addplanetjupyter-cell', 'End of Notebook reflection')
       ])
   }
 // Run on start

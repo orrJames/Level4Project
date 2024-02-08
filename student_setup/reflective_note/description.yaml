@@ -1,10 +1,9 @@
 Type: Module
 Compatibility: 3.x, 4.x, 5.x, 6.x
-Name: Reflective Note
-Main: main.mjs
+Name: Write to fb db
+Main: main.js
 Link: README.md
 Description: |
-  Demo extension to add a default cell with code.
-
+  Creates boiler plate to write to db
 Parameters:
 - none
