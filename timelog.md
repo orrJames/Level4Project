@@ -249,3 +249,26 @@
 ## 29 January 2024
 
 * *6 Hours* Wrote ethics intro script and invite info email.  I also made flyers to spread the word about my project.  Finally, I started creating the quiz for the participants.
+
+## 30 January 2024
+
+* *4 Hours* Edited and reworked Jupyter Notebooks for evaluation
+
+## 2 February 2024
+
+* *1 Hours* Supervisor meeting
+* *1 Hours* Steve Draper meeting
+
+## 3 February 2024
+
+* *4 Hours* Finalised participants setup files and instal specs
+
+## Week 16
+
+## 6 February 2024
+
+* *4 Hours* First installation workshop - lasted longer and required some big fixes after
+
+## 7 February 2024
+
+* *3 Hours* Second installation workshop and email admin work
