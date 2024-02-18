@@ -272,3 +272,41 @@
 ## 7 February 2024
 
 * *3 Hours* Second installation workshop and email admin work
+
+## 8 February 2024
+
+* *4 Hours* Further installation and admin catch up
+
+## 9 February 2024
+
+* *4 Hours* Meeting with Jeremy and start background diss draft
+
+## 10 February 2024
+
+* *2 Hours* Setup for final participants
+
+## Week 17
+
+## 12 February 2024
+
+* *3 Hours* Background reading
+
+## 13 February 2024
+
+* *4 Hours* Background chapter writing
+
+## 14 February 2024
+
+* *3 Hours* Background writing
+
+## 15 February 2024
+
+* *3 Hours* Analysis and requirements draft
+
+## 16 February 2024 
+
+* *2 Hours* Meeting with Jeremy, and further admin work for tutorial session next week
+
+## 18 February 2024
+
+* *4 Hours* Analysis and requirements chapter writing
