@@ -310,3 +310,7 @@
 ## 18 February 2024
 
 * *4 Hours* Analysis and requirements chapter writing
+
+## Week 18
+
+* *4 Hours* Design chapter and eval quiz 2 writing
