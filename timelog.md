@@ -313,4 +313,35 @@
 
 ## Week 18
 
+## 19 February 2024
+
 * *4 Hours* Design chapter and eval quiz 2 writing
+
+## 20 February 2024 
+
+* *5 Hours* Finalised design chapter. Planned implementaiton and evaluation chapter
+* *2 Hours* Tutorial for participants (No-one attended)
+
+## 21 February 2024
+
+* *1 Hour* Tutorial for participants (No-one attended)
+
+## 23 February 2024
+
+* *1 Hour* Meeting with Jeremy
+
+## 24 February 2024 
+
+* *3 Hours* Started making figures for design chapter
+
+## Week 19
+
+## 26 February 2024
+
+* *4 Hours* Figures for design, background, and analysis chapter
+
+## 27 February 2024
+
+* *3 Hours* Figures for implementation, and started writing implementation chapter
+
+
