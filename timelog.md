@@ -344,4 +344,24 @@
 
 * *3 Hours* Figures for implementation, and started writing implementation chapter
 
+## 29 February 2024
+
+* *4 Hours* Implementation writing
+* *1 Hour* Supervisor meeting
+
+## 1 March 2024
+
+* *2 Hours* Quiz distribution and evaluation admin work
+
+## Week 20
+
+## 4 March 2024
+
+* *6 Hours* Redrafted background chapter
+
+## 5 March 2024
+
+* *4 Hours* Re-worked figures and draft reading
+
+
 
