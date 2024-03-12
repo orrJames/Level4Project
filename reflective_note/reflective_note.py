@@ -15,6 +15,13 @@ import os
 from IPython import display
 from IPython.display import Image
 
+import openpyxl
+import pandas as pd
+import os
+import glob
+import csv
+from xlsxwriter.workbook import Workbook
+
 @magics_class
 class FirebaseExtension(Magics):
     def __init__(self, shell):
@@ -155,27 +162,45 @@ class FirebaseExtension(Magics):
                 if (doc.to_dict()["lab"]) == lab:
                     #x = x+"Lab ID:"+(str(doc.to_dict()["lab"]))+" Note:"+doc.to_dict()["note"] + ","
                     counter  = counter +1
-                    total = total + (int(doc.to_dict()["note"][1]) * 60) + (int(doc.to_dict()["note"][3]*10)) + (int(doc.to_dict()["note"][4]))
+                    total = total + (int(doc.to_dict()["time"].split(":")[0]) * 60) + (int(doc.to_dict()["time"].split(":")[1]))
             except:
                 pass
         if counter == 0:
             print("No user recorded their time")
         else:
-            print("Total time entries: ", counter, "\n", "Average time taken: ", (total/counter))
+            print("Total time entries: ", counter, "\n", "Average time taken: ", ((total)//counter), " minutes.")
         FirebaseExtension.generate_csv(lab)
     
     def get_data(lab, documents):
         data = []
+        data_points = 0
         for doc in documents:
             #print( "Data: ", doc.to_dict())
             try:
                 if (doc.to_dict()["lab"]) == lab:
                     #x = x+"Lab ID:"+(str(doc.to_dict()["lab"]))+" Note:"+doc.to_dict()["note"] + ","
-                    data.append(doc.to_dict())
+                    doc_dict = doc.to_dict()
+                    #clean_d = { k:v.strip() for k, v in doc_dict.iteritems()}
+                    data.append(doc_dict)
+                    data_points = data_points + 1
+                    #print(doc_dict)
             except:
                 pass
-        return data
-    
+        return data, data_points
+    def generate_excel(csvfile): 
+        workbook = Workbook(csvfile[:-4] + '.xlsx')
+        worksheet = workbook.add_worksheet()
+        with open(csvfile, 'rt', encoding='utf8') as f:
+            reader = csv.reader(f)
+            for r, row in enumerate(reader):
+                for c, col in enumerate(row):
+                    worksheet.write(r, c, col)
+        workbook.close()
+        print("Excel summary generated: ", csvfile[:-4] + '.xlsx')
+        if os.path.exists(csvfile):
+            os.remove(csvfile)
+
+
     def generate_csv(lab):
         db = firestore.client()
         notes_ref = db.collection("reflective_notes")
@@ -185,32 +210,46 @@ class FirebaseExtension(Magics):
         reflective_notes = notes_ref.stream()
 
         # Extract document data and write to CSV
-        notes_data = FirebaseExtension.get_data(lab,reflective_notes)
-        emotions_data = FirebaseExtension.get_data(lab,emotions_ref.stream())
-        time_data = FirebaseExtension.get_data(lab,time_ref.stream())
+        notes_data, notes_number = FirebaseExtension.get_data(lab,reflective_notes)
+        emotions_data, emotion_number = FirebaseExtension.get_data(lab,emotions_ref.stream())
+        time_data, time_number = FirebaseExtension.get_data(lab,time_ref.stream())
         
         # # If you want to use Pandas to export to CSV
         # df = pd.DataFrame(data)
         # df.to_csv(csv_filename, index=False)
 
         # If you want to use CSV library directly
-        file_name = "lab_"+ str(lab)+ "_reflections.csv"
-        with open(file_name, mode='w', newline='') as file:
+        file_name_note = "lab_"+ str(lab)+ "_refelctive_note.csv"
+        file_name_time = "lab_"+ str(lab)+ "_times.csv"
+        file_name_emotions = "lab_"+ str(lab)+ "_emotions.csv"
+        with open(file_name_note, mode='w', newline='') as file:
             try:
                 writer = csv.DictWriter(file, fieldnames=notes_data[0].keys())
                 writer.writeheader()
                 writer.writerows(notes_data)
+            except:
+                pass
 
+        with open(file_name_emotions, mode='w', newline='') as file:
+            try:
                 writer = csv.DictWriter(file, fieldnames=emotions_data[0].keys())
                 writer.writeheader()
                 writer.writerows(emotions_data)
+            except:
+                pass
 
+        with open(file_name_time, mode='w', newline='') as file:
+            try:
                 writer = csv.DictWriter(file, fieldnames=time_data[0].keys())
                 writer.writeheader()
                 writer.writerows(time_data)
             except:
                 pass
-        print("csv_generated: "+ file_name)
+        print("Total end of Notebook reflections: ", notes_number)
+        print("Total emotions selected: ", emotion_number)
+       # print("Emotion, time and end of Notebook refelctions files generated")
+        #print("csv_generated: "+ file_name)
+        #FirebaseExtension.generate_excel(file_name)
 
 
 def load_ipython_extension(ipython):

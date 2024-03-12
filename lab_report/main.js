@@ -2,6 +2,7 @@ var init_fb = function() {
     Jupyter.notebook.
     insert_cell_below('code').
     set_text("%load_ext autoreload\n%autoreload 2\n%run C:\\Users\\orrja\\uni\\Level4\\Level4Project\\reflective_note\\reflective_note");
+    //change this so can be deployable!!!!
     Jupyter.notebook.select_next();
     Jupyter.notebook.execute_cell();
 
@@ -41,7 +42,7 @@ var init_fb = function() {
       Jupyter.toolbar.add_buttons_group([
           Jupyter.keyboard_manager.actions.register ({
               'help': 'Generate a summary report',
-              'icon' : '<i class="fas fa-x-ray"></i>',
+              'icon' : 'fa-question-circle',
               'handler': init_fb
           }, 'addplanetjupyter-cell', 'Read from fb db')
       ])
