@@ -363,5 +363,33 @@
 
 * *4 Hours* Re-worked figures and draft reading
 
+## 8 March 2024
+
+* *5 Hours* Supervisor meeting, prep for pizza party, and pizza party event
+
+## 9 March 2024
+
+* *3 Hours* Implementation reworking
+
+## Week 21 
+
+## 11 March 
+
+* *5 Hours* Implementation and evaluation chapter writing
+
+## 14 March 
+
+* *5 Hours* Evaluation chapter writing - tables, draft, data analysis
+
+## 15 March
+
+* *6 Hours* Evaluation, introduction chapter writing. Supervisor meeting and prep time
+
+## 17 March
+
+* *3 Hours* Intro and re-working chapters
+
+
+
 
 
