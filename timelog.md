@@ -381,5 +381,15 @@
 
 * *5 Hours* Evaluation chapter writing - tables, draft, data analysis
 
+## 15 March
+
+* *6 Hours* Evaluation, introduction chapter writing. Supervisor meeting and prep time
+
+## 17 March
+
+* *3 Hours* Intro and re-working chapters
+
+
+
 
 
