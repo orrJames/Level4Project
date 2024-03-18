@@ -16,7 +16,7 @@ Once installed learners can start, reset and save the time spent on a lab. The s
 Users are prompted with a selection of emotions after they click the Select Emotion button. After learners click an emotion it is displayed in the Notebook and saved to the database after a lab ID is inputted by the learner.
 
 # End-of-lab Reflection
-Learners are prompted to end their lab Notebook by selecting the end-of-lab refelciton button form the tool bar. The extension prompts users to reflective on the lab as a whole.  Making use of the reflection gathered along the way, the extension prompts the user to recap their feeling and overall thoughts about the Notebook.  The overall reflection is recorded to the database after the user successfully complete the end-of-lab walk-though. Similar to the other learner extensions, the inputs are saved to the Notebook as well as the database so learners can revisit them.
+Learners are prompted to end their lab Notebook by selecting the end-of-lab reflection button form the tool bar. The extension prompts users to reflective on the lab as a whole.  Making use of the reflections gathered along the way, the extension prompts the user to recap their feelings and overall thoughts about the Notebook.  The overall reflection is recorded to the database after the user successfully complete the end-of-lab walk-though. Similar to the other learner extensions, the inputs are saved to the Notebook as well as the database so learners can revisit them.
 
 # Lecturer Tool
 
