@@ -1,0 +1,9 @@
+Type: Module
+Compatibility: 3.x, 4.x, 5.x, 6.x
+Name: Embedded Reflective Note
+Main: main.js
+Link: README.md
+Description: |
+  Creates markdown for user to add reflective note
+Parameters:
+- none
