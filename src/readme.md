@@ -21,14 +21,14 @@ Each extension must be installed individually with the following instructions.
 Windows instructions:
 
 * Open Anaconda Prompt 
-* Change directory (cd) to extension location
+* Change directory (CD) to extension location
 * Run following install command: jupyter nbextension install <extension_folder>
 * Run following install command: jupyter nbextension enable <extension_folder/main>
 * Repeat for each reflective extension
 
 Mac instructions:
 * Open terminal 
-* Change directory (cd) to extension location
+* Change directory (CD) to extension location
 * Run following install command: jupyter nbextension install <extension_folder> --user
 * Run following install command: jupyter nbextension enable <extension_folder/main> --user
 * Repeat for each reflective extension
