@@ -389,6 +389,20 @@
 
 * *3 Hours* Intro and re-working chapters
 
+## Week 22
+
+## 18 March
+* *6 hours* Intro and evaulation writing
+
+## 19 March
+* *6 hours* Evaluation and further tables
+
+## 20 March
+* *8 hours* Final meeting, presentation slides work, and conclusion
+
+## 21 March
+* *9 hours* Complete run down of all chapters, final touches, and presentation slides
+
 
 
 
